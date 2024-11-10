@@ -34,8 +34,8 @@ async function setSceneSettings() {
 	settings.MaxOccupancy = 45;
 	settings.RefreshRate = 72;
 	settings.ClippingPlane = new BS.Vector2(0.05, 1000);
-	settings.SpawnPoint = new BS.Vector4(0, 0.01, 0, 0);
-	comcoscene.TeleportTo({x: 0, y: 0.01, z: 0}, 0, true);
+	settings.SpawnPoint = new BS.Vector4(0, 0.01, 0, 180);
+	comcoscene.TeleportTo({x: 0, y: 0.01, z: 0}, 180, true);
 	comcoscene.SetSettings(settings);
 	setTimeout(() => { comcoscene.SetSettings(settings); }, 2000);
 };
@@ -59,14 +59,14 @@ let ytplayerdisabled = true;
 		videoplayer.setAttribute("button-scale", "2 2 2");
 		videoplayer.setAttribute("spatial-min-distance", "1");
 		videoplayer.setAttribute("spatial-max-distance", "1000");
-		videoplayer.setAttribute("playlist", "PLZWiw-xxQ4SPdNKGMFhMb8fPdmjT9q3HK");
+		videoplayer.setAttribute("playlist", "PLZWiw-xxQ4SP1uCfpCU8OkHg-tlzewULz");
 		videoplayer.setAttribute("announce", "false");
-		videoplayer.setAttribute("data-playlist-icon-url", "https://cdn.glitch.global/47f0acb4-4420-4f3f-bb01-dba17f8c0edb/Playlist.png?v=1711786451727");
-		videoplayer.setAttribute("data-vol-up-icon-url", "https://cdn.glitch.global/47f0acb4-4420-4f3f-bb01-dba17f8c0edb/Vol_Up.png?v=1711785431096");
-		videoplayer.setAttribute("data-vol-down-icon-url", "https://cdn.glitch.global/47f0acb4-4420-4f3f-bb01-dba17f8c0edb/Vol_Dn.png?v=1711785430202");
-		videoplayer.setAttribute("data-mute-icon-url", "https://cdn.glitch.global/47f0acb4-4420-4f3f-bb01-dba17f8c0edb/Vol_Mute_Off.png?v=1711785430667");
-		videoplayer.setAttribute("data-skip-forward-icon-url", "https://cdn.glitch.global/47f0acb4-4420-4f3f-bb01-dba17f8c0edb/Sync_FW.png?v=1711785429798");
-		videoplayer.setAttribute("data-skip-backward-icon-url", "https://cdn.glitch.global/47f0acb4-4420-4f3f-bb01-dba17f8c0edb/Sync_Bk.png?v=1711785429431");
+		videoplayer.setAttribute("data-playlist-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Playlist.png?v=1713028119937");
+		videoplayer.setAttribute("data-vol-up-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/VolUp.png?v=1713028119640");
+		videoplayer.setAttribute("data-vol-down-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/VolDown.png?v=1713028119279");
+		videoplayer.setAttribute("data-mute-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Mute.png?v=1713028120228");
+		videoplayer.setAttribute("data-skip-forward-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Forward.png?v=1713028118642");
+		videoplayer.setAttribute("data-skip-backward-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Backwardsd.png?v=1713028118986");
 		videoplayer.setAttribute("src", "https://best-v-player.glitch.me/playlist.js"); // https://vidya.sdq.st/playlist.js
     document.querySelector("a-scene").appendChild(videoplayer);
   } else {console.log("enable yt player called");}
