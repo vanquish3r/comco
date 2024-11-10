@@ -1,6 +1,6 @@
 const comcoscene = BS.BanterScene.GetInstance();
 
-let youtubePlaylist = `PL24rMr-iJJ1LwIG3SPYtnJa3qd3O4F-oQ`;
+let youtubePlaylist = `PLpaueZh8o4LYRuMOtuhrHaiahdGdMIslL`;
 let websiteurl = "https://screen.sdq.st:8443/?room=comco"; /* ?autoplay=1&controls=0 For YouTube Live */
 let otherwebsiteurl = "https://comcotheatre.com/";
 
@@ -31,8 +31,8 @@ async function setSceneSettings() {
 	settings.MaxOccupancy = 45;
 	settings.RefreshRate = 72;
 	settings.ClippingPlane = new BS.Vector2(0.05, 1000);
-	settings.SpawnPoint = new BS.Vector4(0, 0.01, 0, 180);
-	comcoscene.TeleportTo({x: 0, y: 0.01, z: 0}, 180, true);
+	settings.SpawnPoint = new BS.Vector4(0, 0.01, 0, 0);
+	comcoscene.TeleportTo({x: 0, y: 0.01, z: 0}, 0, true);
 	comcoscene.SetSettings(settings);
 	setTimeout(() => { comcoscene.SetSettings(settings); }, 2000);
 };
@@ -115,7 +115,7 @@ function enableThePortableFireScreen() {
 	firescreen.setAttribute("pixelsperunit", "1200");
 	firescreen.setAttribute("width", "1280");
 	firescreen.setAttribute("height", "720");
-	firescreen.setAttribute("announce", "true");
+	firescreen.setAttribute("announce", "false");
 	firescreen.setAttribute("announce-events", "true");
 	firescreen.setAttribute("volume", "0.5");
  	firescreen.setAttribute("backdrop", "true");
