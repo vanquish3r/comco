@@ -82,7 +82,7 @@ function enableScreenStuff2() {
 		firescreen.setAttribute("scale", "1 1 1");
 		firescreen.setAttribute("rotation", "0 0 0");
 		firescreen.setAttribute("screen-rotation", "0 0 0");
-		firescreen.setAttribute("screen-scale", "0.76 0.76 1");
+		firescreen.setAttribute("screen-scale", "0.515 0.515 1");
 		firescreen.setAttribute("position", "0 -5 0");
 		firescreen.setAttribute("lock-position", "true");
 		firescreen.setAttribute("mipmaps", "1");
@@ -124,7 +124,7 @@ function enableScreenThingy() {
 		console.log("Adding Screen");
 		const firescreen = document.createElement("script");
 		firescreen.id = "banter-firescreen";
-		firescreen.setAttribute("scale", "0.9 0.9 1");
+		firescreen.setAttribute("scale", "0.7 0.7 1");
 		firescreen.setAttribute("position", "-16.989 1.269 -29.428");
 		firescreen.setAttribute("rotation", "0 0 0");		
 		firescreen.setAttribute("mipmaps", "0");
