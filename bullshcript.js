@@ -124,7 +124,7 @@ function enableScreenThingy() {
 		console.log("Adding Screen");
 		const firescreen = document.createElement("script");
 		firescreen.id = "banter-firescreen";
-		firescreen.setAttribute("scale", "0.7 0.7 1");
+		firescreen.setAttribute("scale", "0.8 0.8 1");
 		firescreen.setAttribute("position", "-16.989 1.269 -29.428");
 		firescreen.setAttribute("rotation", "0 0 0");		
 		firescreen.setAttribute("mipmaps", "0");
