@@ -83,12 +83,12 @@ function enableScreenStuff2() {
 		firescreen.setAttribute("rotation", "0 0 0");
 		firescreen.setAttribute("screen-rotation", "0 0 0");
 		firescreen.setAttribute("screen-scale", "0.515 0.515 1");
-		firescreen.setAttribute("position", "0 2 10.1");
+		firescreen.setAttribute("position", "0 2 -10.1");
 		firescreen.setAttribute("lock-position", "true");
 		firescreen.setAttribute("mipmaps", "1");
 		firescreen.setAttribute("pixelsperunit", "1600");
 		firescreen.setAttribute("castmode", "true");
-		firescreen.setAttribute("backdrop", "false");
+		firescreen.setAttribute("backdrop", "true");
 		firescreen.setAttribute("disable-rotation", "true");
 		firescreen.setAttribute("hand-controls", "true");
 		firescreen.setAttribute("announce", "false");
@@ -97,7 +97,7 @@ function enableScreenStuff2() {
 		firescreen.setAttribute("volume", "0.25");
 		firescreen.setAttribute("width", "1920");
 		firescreen.setAttribute("height", "1080");
-		firescreen.setAttribute("screen-position", "0 -7 -10.1");
+		firescreen.setAttribute("screen-position", "0 -7 10.1");
 		firescreen.setAttribute("website", websiteurl);
 		firescreen.setAttribute("src", "https://firer.at/scripts/firescreenv2.js");
 		document.querySelector("a-scene").appendChild(firescreen);
