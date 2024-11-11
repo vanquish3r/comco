@@ -124,8 +124,8 @@ function enableScreenThingy() {
 		console.log("Adding Screen");
 		const firescreen = document.createElement("script");
 		firescreen.id = "banter-firescreen";
-		firescreen.setAttribute("scale", "0.7 0.7 1");
-		firescreen.setAttribute("position", "-16.45 1.269 0.75");
+		firescreen.setAttribute("scale", "0.9 0.9 1");
+		firescreen.setAttribute("position", "-16.989 1.269 -29.428");
 		firescreen.setAttribute("rotation", "0 0 0");		
 		firescreen.setAttribute("mipmaps", "0");
 		firescreen.setAttribute("pixelsperunit", "1200");
@@ -137,7 +137,7 @@ function enableScreenThingy() {
 		firescreen.setAttribute("width", "1280");
 		firescreen.setAttribute("height", "720");
 		firescreen.setAttribute("website", otherwebsiteurl);
-		firescreen.setAttribute("disable-rotation", "false");
+		// firescreen.setAttribute("disable-rotation", "false");
 		firescreen.setAttribute("custom-button01-url", "https://banterlateshow.glitch.me/0-0-shownotes-0-0.txt");
 		firescreen.setAttribute("custom-button01-text", "Show Notes");
 		firescreen.setAttribute("custom-button02-url", "https://banterlateshow.glitch.me/darwinawards.html");
