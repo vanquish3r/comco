@@ -171,9 +171,9 @@ setTimeout(() => { somerandomStartActions(); }, 5000);
   }
           // NAME // Button Position // posterImage // localRotation
     createPoster('PosterL1', new BS.Vector3(-13.27,3.2,-12.05), 'https://vanquish3r.github.io/comco/posters/poster-l1.jpg', 'https://comcotheatre.com/packages/', new BS.Vector3(0,-44.55,0));
-    createPoster('PosterL2', new BS.Vector3(-16.8,8.5,-8.51), 'https://firer.at/files/VolumeMute.png', 'https://comcotheatre.com/packages/', new BS.Vector3(0,-44.55,0));
-    createPoster('PosterL3', new BS.Vector3(-20.33,13.79,-4.97), 'https://firer.at/files/VolumeMute.png', 'https://comcotheatre.com/packages/', new BS.Vector3(0,-44.55,0));
-    createPoster('PosterR1', new BS.Vector3(12.97,3.2,-12.09), 'https://firer.at/files/VolumeMute.png', 'https://comcotheatre.com/packages/', new BS.Vector3(0,45.1,0));
-    createPoster('PosterR2', new BS.Vector3(16.48,8.5,-8.54), 'https://firer.at/files/VolumeMute.png', 'https://comcotheatre.com/packages/', new BS.Vector3(0,45.1,0));
-    createPoster('PosterR3', new BS.Vector3(20.04,13.79,-5.04), 'https://firer.at/files/VolumeMute.png', 'https://comcotheatre.com/packages/', new BS.Vector3(0,45.1,0));
+    createPoster('PosterL2', new BS.Vector3(-16.8,8.5,-8.51), 'https://vanquish3r.github.io/comco/posters/poster-l2.jpg', 'https://comcotheatre.com/packages/', new BS.Vector3(0,-44.55,0));
+    createPoster('PosterL3', new BS.Vector3(-20.33,13.79,-4.97), 'https://vanquish3r.github.io/comco/posters/poster-l3.jpg', 'https://comcotheatre.com/packages/', new BS.Vector3(0,-44.55,0));
+    createPoster('PosterR1', new BS.Vector3(12.97,3.2,-12.09), 'https://vanquish3r.github.io/comco/posters/poster-r1.jpg', 'https://comcotheatre.com/packages/', new BS.Vector3(0,45.1,0));
+    createPoster('PosterR2', new BS.Vector3(16.48,8.5,-8.54), 'https://vanquish3r.github.io/comco/posters/poster-r2.jpg', 'https://comcotheatre.com/packages/', new BS.Vector3(0,45.1,0));
+    createPoster('PosterR3', new BS.Vector3(20.04,13.79,-5.04), 'https://vanquish3r.github.io/comco/posters/poster-r3.jpg', 'https://comcotheatre.com/packages/', new BS.Vector3(0,45.1,0));
   
