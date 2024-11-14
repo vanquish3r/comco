@@ -151,28 +151,24 @@ function enableScreenThingy() {
 
 setTimeout(() => { somerandomStartActions(); }, 5000);
 
-(async () => {
-  //Poster L1
-  const isTrigger = false;
-  const center = new BS.Vector3(0, 0, 0);
-  const ShaderName = "Unlit/Diffuse";
-  const color = new BS.Vector4(1, 0, 0, 1);
-  const texture = "https://cdn.glitch.global/7bdd46d4-73c4-47a1-b156-10440ceb99fb/GridBox_Default.png?v=1708022523716";
-  const side = 0;
-  const geometryType = BS.GeometryType.BoxGeometry;
-  const parametricType = null;
-  const width = 2;
-  const height = 2;
-  const depth = 2;
-  const size = new BS.Vector3(width, height, depth);
-  const gameObject = new BS.GameObject("MyBoxCollider");
-  const boxCollider = await gameObject.AddComponent(
-    new BS.BoxCollider(isTrigger, center, size)
-  );
-  const geometry = await gameObject.AddComponent(
-    new BS.BanterGeometry(geometryType, parametricType, width, height, depth)
-  );
-  const material = await gameObject.AddComponent(
-    new BS.BanterMaterial(ShaderName, texture, color, side)
-  );
-});
+  async function createPoster(name, butPosition, posterImage = null, posterLink, localRotation = new BS.Vector3(0,0,0), localScale = new BS.Vector3(1, 1, 1), width = 1, height = 1) {
+    const buttonObject = new BS.GameObject(`Button_${name}`); // Create the Object and give it a name
+    await buttonObject.AddComponent(new BS.BanterGeometry(BS.GeometryType.PlaneGeometry, null, width, height)); // add geometry to the object
+    await buttonObject.AddComponent(new BS.BanterMaterial('Unlit/Diffuse', posterImage, new BS.Vector4(1, 1, 1, 1))); // Set the Shader (Unlit/Diffuse) and the Color (0.1, 0.1, 0.1, 0.7) 0.7 being the alpha / transparency 
+    const buttonTransform = await buttonObject.AddComponent(new BS.Transform()); // Add a transform component so you can move and transform the object
+    await buttonObject.AddComponent(new BS.MeshCollider(true)); // Add a mesh Collider for the clicking to work
+    buttonObject.SetLayer(5); // Set the object to UI Layer 5 so it can be clicked
+
+    buttonTransform.position = butPosition; // Set the Position of the object
+    buttonTransform.localScale = localScale; // Set the Scale of the object
+    buttonTransform.localEulerAngles = localRotation; // Set the Scale of the object
+
+      buttonObject.On('click', () => {
+        console.log(`Button clicked!`);
+        openPage(posterLink);
+      });
+  }
+          // NAME // Button Position // posterImage // localRotation
+    createPoster('FirstBut', new BS.Vector3(0,1.5,0), 'https://firer.at/files/VolumeMute.png', 'https://google.com', new BS.Vector3(0,0,0));
+    createPoster('SecondBut', new BS.Vector3(1,1.5,0), 'https://firer.at/files/VolumeLow.png', 'https://firer.at', new BS.Vector3(25,0,0));
+  
