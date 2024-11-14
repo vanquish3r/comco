@@ -170,6 +170,10 @@ setTimeout(() => { somerandomStartActions(); }, 5000);
       });
   }
           // NAME // Button Position // posterImage // localRotation
-    createPoster('PosterL1', new BS.Vector3(-13.27,3.2,-12.05), 'https://firer.at/files/VolumeMute.png', 'https://comcotheatre.com/packages/', new BS.Vector3(0,-44.5,0));
-    createPoster('SecondBut', new BS.Vector3(1,1.5,0), 'https://firer.at/files/VolumeLow.png', 'https://firer.at', new BS.Vector3(25,0,0));
+    createPoster('PosterL1', new BS.Vector3(-13.27,3.2,-12.05), 'https://firer.at/files/VolumeMute.png', 'https://comcotheatre.com/packages/', new BS.Vector3(0,-44.55,0));
+    createPoster('PosterL2', new BS.Vector3(-16.8,8.5,-8.51), 'https://firer.at/files/VolumeMute.png', 'https://comcotheatre.com/packages/', new BS.Vector3(0,-44.55,0));
+    createPoster('PosterL3', new BS.Vector3(-20.33,13.79,-4.97), 'https://firer.at/files/VolumeMute.png', 'https://comcotheatre.com/packages/', new BS.Vector3(0,-44.55,0));
+    createPoster('PosterR1', new BS.Vector3(12.97,3.2,-12.09), 'https://firer.at/files/VolumeMute.png', 'https://comcotheatre.com/packages/', new BS.Vector3(0,45.1,0));
+    createPoster('PosterR2', new BS.Vector3(16.48,8.5,-8.54), 'https://firer.at/files/VolumeMute.png', 'https://comcotheatre.com/packages/', new BS.Vector3(0,45.1,0));
+    createPoster('PosterR3', new BS.Vector3(20.04,13.79,-5.04), 'https://firer.at/files/VolumeMute.png', 'https://comcotheatre.com/packages/', new BS.Vector3(0,45.1,0));
   
