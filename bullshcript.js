@@ -175,3 +175,4 @@ setTimeout(() => { somerandomStartActions(); }, 5000);
   const material = await gameObject.AddComponent(
     new BS.BanterMaterial(ShaderName, texture, color, side)
   );
+});
