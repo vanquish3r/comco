@@ -153,18 +153,19 @@ setTimeout(() => { somerandomStartActions(); }, 5000);
 
 (async () => {
   //Poster L1
-  const center = new BS.Vector3(1, 1, 1);
+  const isTrigger = false;
+  const center = new BS.Vector3(0, 0, 0);
   const ShaderName = "Unlit/Diffuse";
   const color = new BS.Vector4(1, 0, 0, 1);
-  const texture = "https://bantervr.com/assets/Banter_No_Background.png";
+  const texture = "https://cdn.glitch.global/7bdd46d4-73c4-47a1-b156-10440ceb99fb/GridBox_Default.png?v=1708022523716";
   const side = 0;
-  const geometryType = BS.GeometryType.PlaneGeometry;
+  const geometryType = BS.GeometryType.BoxGeometry;
   const parametricType = null;
-  const width = 1;
+  const width = 2;
   const height = 2;
-  const depth = 0.1;
+  const depth = 2;
   const size = new BS.Vector3(width, height, depth);
-  const gameObject = new BS.GameObject("PosterL1");
+  const gameObject = new BS.GameObject("MyBoxCollider");
   const boxCollider = await gameObject.AddComponent(
     new BS.BoxCollider(isTrigger, center, size)
   );
@@ -174,4 +175,3 @@ setTimeout(() => { somerandomStartActions(); }, 5000);
   const material = await gameObject.AddComponent(
     new BS.BanterMaterial(ShaderName, texture, color, side)
   );
-});
