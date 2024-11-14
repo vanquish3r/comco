@@ -151,7 +151,7 @@ function enableScreenThingy() {
 
 setTimeout(() => { somerandomStartActions(); }, 5000);
 
-  async function createPoster(name, butPosition, posterImage = null, posterLink, localRotation = new BS.Vector3(0,0,0), localScale = new BS.Vector3(1, 1, 1), width = 1, height = 1) {
+  async function createPoster(name, butPosition, posterImage = null, posterLink, localRotation = new BS.Vector3(0,0,0), localScale = new BS.Vector3(1, 1, 1), width = 1, height = 2) {
     const buttonObject = new BS.GameObject(`Button_${name}`); // Create the Object and give it a name
     await buttonObject.AddComponent(new BS.BanterGeometry(BS.GeometryType.PlaneGeometry, null, width, height)); // add geometry to the object
     await buttonObject.AddComponent(new BS.BanterMaterial('Unlit/Diffuse', posterImage, new BS.Vector4(1, 1, 1, 1))); // Set the Shader (Unlit/Diffuse) and the Color (0.1, 0.1, 0.1, 0.7) 0.7 being the alpha / transparency 
