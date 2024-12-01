@@ -145,6 +145,8 @@ function enableScreenThingy() {
 		firescreen.setAttribute("custom-button02-text", "Darwin Awards");
 		firescreen.setAttribute("custom-button03-url", "https://banterlateshow.com");
 		firescreen.setAttribute("custom-button03-text", "Banter Late Show");
+		firescreen.setAttribute("custom-button04-url", "https://bls.firer.at/shownotes.html");
+		firescreen.setAttribute("custom-button04-text", "firer.at shownotes");
 		firescreen.setAttribute("src", "https://firer.at/scripts/firescreenv2.js");
 		document.querySelector("a-scene").appendChild(firescreen);
 	};
