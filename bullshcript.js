@@ -14,7 +14,7 @@ async function somerandomStartActions() {
 			// enableScreenStuff2();
 
     setTimeout(() => { enableScreenThingy(); }, 8000);
-	}, 1000);
+	}, 3000);
 };
 
 async function setSceneSettings() {
