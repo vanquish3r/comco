@@ -13,7 +13,7 @@ async function somerandomStartActions() {
 		/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
 			// enableScreenStuff2();
 
-    setTimeout(() => { enableScreenThingy(); }, 5000);
+    setTimeout(() => { enableScreenThingy(); }, 8000);
 	}, 1000);
 };
 
