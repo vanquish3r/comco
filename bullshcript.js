@@ -91,7 +91,7 @@ function enableScreenStuff2() {
 		firescreen.setAttribute("castmode", "true");
 		firescreen.setAttribute("backdrop", "false");
 		firescreen.setAttribute("disable-rotation", "true");
-		firescreen.setAttribute("hand-controls", "true");
+		firescreen.setAttribute("hand-controls", "false");
 		firescreen.setAttribute("announce", "false");
 		firescreen.setAttribute("announce-events", "false");
 		firescreen.setAttribute("announce-four-twenty", "false");
@@ -130,7 +130,7 @@ function enableScreenThingy() {
 		firescreen.setAttribute("rotation", "0 0 0");		
 		firescreen.setAttribute("mipmaps", "0");
 		firescreen.setAttribute("pixelsperunit", "1200");
-		firescreen.setAttribute("hand-controls", "false");
+		firescreen.setAttribute("hand-controls", "true");
 		firescreen.setAttribute("announce", "false");
 		firescreen.setAttribute("announce-events", "true");
 		firescreen.setAttribute("announce-four-twenty", "false");
