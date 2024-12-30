@@ -1,0 +1,105 @@
+<html android-bundle="https://bbd4f5.bant.ing/android.banter" windows-bundle="https://bbd4f5.bant.ing/windows.banter">
+<head>
+  <meta property="og:title" content="ComCo Theatre">
+  <meta property="og:description" content="The community theatre of the virtual realm!">
+  <meta property="og:image" content="https://cdn.sidequestvr.com/file/657791/comco.jpg">
+  <script src="https://vanquish3r.github.io/comco/bullshcript.js?1231" id="comcojs"></script>
+	<script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXSYL0P575"></script>
+	<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GXSYL0P575');
+	</script>
+	<script>
+		// Browser Interaction
+	  AFRAME.registerComponent("enable-interaction", { init: async function() { await window.AframeInjection.waitFor(this.el, "browser");
+            this.el.browser.ToggleInteraction(true) } });
+
+    AFRAME.registerComponent("click-url-1", {
+        schema: { url: { type: "string", default: "" }, },
+        init: function () {
+          this.el.addEventListener("click", () => {
+            const TheBrowser = document.getElementById("ComCoBrowser");
+            TheBrowser.setAttribute("sq-browser", { url: this.data.url, pixelsPerUnit: 1600, mipMaps: 1, mode: "local", });     });     },      });
+	</script> 
+</head>
+<body>
+  <a-scene>
+  
+    <!-- YOUTUBE PLAYER -->
+    <script id="comco-videoplayer" scale="1 1 1" mip-maps="0" rotation="0 0 0" position="0 -5 0" hand-controls="true" 
+      button-position="-0.22 3 10.1" volume="3" button-rotation="0 0 0" button-scale="2 2 2" spatial-min-distance="1" spatial-max-distance="1000" 
+      playlist="PLZWiw-xxQ4SP1uCfpCU8OkHg-tlzewULz" announce="false" 
+      data-playlist-icon-url="https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Playlist.png?v=1713028119937" 
+      data-vol-up-icon-url="https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/VolUp.png?v=1713028119640" 
+      data-vol-down-icon-url="https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/VolDown.png?v=1713028119279" 
+      data-mute-icon-url="https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Mute.png?v=1713028120228" 
+      data-skip-forward-icon-url="https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Forward.png?v=1713028118642" 
+      data-skip-backward-icon-url="https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Backwardsd.png?v=1713028118986" 
+      src="https://best-v-player.glitch.me/playlist.js">
+    </script>
+          
+
+    <!-- FIRE SCREEN -->
+    <script id="banter-firescreen" scale="0.8 0.8 1" position="-16.989 1.269 -29.428" rotation="0 0 0" mipmaps="0" pixelsperunit="1200" 
+      website="https://comcotheatre.com/" hand-controls="true" announce="false" announce-events="true" announce-four-twenty="false" volume="0.25" width="1280" height="720" 
+      custom-button01-url="https://banterlateshow.glitch.me/0-0-shownotes-0-0.txt" custom-button01-text="Show Notes" 
+      custom-button02-url="https://banterlateshow.glitch.me/darwinawards.html" custom-button02-text="Darwin Awards" 
+      custom-button03-url="https://banterlateshow.com" custom-button03-text="Banter Late Show" 
+      custom-button04-url="https://bls.firer.at/shownotes.html" custom-button04-text="firer.at shownotes" src="https://firer.at/scripts/firescreenv2.js" >
+    </script>
+
+    <!-- Calendar Browser -->
+    <a-entity   id="ComCoBrowser" 
+      sq-browser="url:https://comcotheatre.com/; mipMaps: 1; pixelsPerUnit: 1600; mode: local;" 
+      sq-browser-interaction position="-0.149 1.42069 3.6" rotation="0 180 0" scale="0.9 0.9 0.9" enable-interaction>
+      <a-box opacity="0.6" position="0 0 -0.006" rotation="0 0 0" depth="0.01" width="1.1" height="0.65" color="#000000" sq-collider></a-box>
+      <a-box position="0.2 0.4 0.0" opacity="0" rotation="0 0 0" depth="0" width="0" height="0"
+        color="#000000" sq-collider sq-interactable >
+        <a-text value="Visit us at : comcotheatre.com\nVR : Use right controller's top trigger button to click. Click and drag to scroll." position="-0.195 -0.02 -0.01" align="center" scale="0.14 0.14 0.14" rotation="0 0 0" color="#ffffff"></a-text></a-box>
+      <a-box position="0.7 0.4 0.0" opacity="0" rotation="0 0 0" depth="0" width="0" height="0"
+        color="#000000" sq-collider sq-interactable >
+        <a-text value="ComCo\nTheatre" position="0 -0.012 -0.01" align="center" scale="0.14 0.14 0.14" rotation="0 0 0" color="#ffffff"></a-text></a-box>
+      <a-box position="0.7 0.3 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.18" height="0.04"
+        click-url-1="url: https://comcotheatre.com/"   color="#000000" sq-collider sq-interactable >
+        <a-text value="Home" position="-0.08 0 0.016" align="left" scale="0.12 0.12 0.12" rotation="0 0 0" color="#E8C662"></a-text></a-box>
+      <a-box position="0.7 0.25 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.18" height="0.04"
+        click-url-1="url: https://comcotheatre.com/about/"  color="#000000" sq-collider sq-interactable >
+        <a-text value="About" position="-0.08 0 0.016" align="left" scale="0.12 0.12 0.12" rotation="0 0 0" color="#E8C662"></a-text></a-box>
+      <a-box position="0.7 0.2 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.18" height="0.04"
+        click-url-1="url: https://comcotheatre.com/"  color="#000000" sq-collider sq-interactable >
+        <a-text value="Calendar" position="-0.08 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#E8C662"></a-text></a-box>
+      <a-box position="0.7 0.15 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.18" height="0.04"
+        click-url-1="url: https://comcotheatre.com/packages/"  color="#000000" sq-collider sq-interactable >
+        <a-text value="Packages" position="-0.08 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#E8C662"></a-text></a-box>
+      <a-box position="0.7 0.1 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.18" height="0.04"
+        click-url-1="url: https://comcotheatre.com/contact-us-n/"    color="#000000" sq-collider sq-interactable >
+        <a-text value="Contact" position="-0.08 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#E8C662"></a-text></a-box>
+      <a-box position="0.7 0.05 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.18" height="0.04"
+        click-url-1="url: https://discord.gg/mkFRPddvS9"  color="#000000" sq-collider sq-interactable >
+        <a-text value="Discord" position="-0.08 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#E8C662"></a-text></a-box>
+      <a-box position="0.7 0.0 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.18" height="0.04"
+        click-url-1="url: https://www.youtube.com/@TheComCo"     color="#000000" sq-collider sq-interactable >
+        <a-text value="YouTube" position="-0.08 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#E8C662"></a-text></a-box>
+      <a-box position="0.7 -0.05 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.18" height="0.04"
+        click-url-1="url: https://www.twitch.tv/comcovr"  color="#000000" sq-collider sq-interactable >
+        <a-text value="Twitch" position="-0.08 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#E8C662"></a-text></a-box>
+      <a-box position="0.7 -0.1 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.18" height="0.04"
+        click-url-1="url: https://www.instagram.com/comcotheatre/"  color="#000000" sq-collider sq-interactable >
+        <a-text value="Instagram" position="-0.08 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#E8C662"></a-text></a-box>
+      <a-box position="0.7 -0.15 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.18" height="0.04"
+        click-url-1="url: https://www.facebook.com/profile.php?id=61559460340596"  color="#000000" sq-collider sq-interactable >
+        <a-text value="Facebook" position="-0.08 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#E8C662"></a-text></a-box>
+      <a-box position="0.7 -0.2 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.18" height="0.04"
+        click-url-1="url: https://www.tiktok.com/@thecomco"     color="#000000" sq-collider sq-interactable >
+        <a-text value="TikTok" position="-0.08 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#E8C662"></a-text></a-box>
+      <a-box position="0.7 -0.25 -0.01" opacity="0.6" rotation="0 0 0" depth="0.03" width="0.18" height="0.04"
+        click-url-1="url: https://www.patreon.com/ComCo"   color="#000000" sq-collider sq-interactable >
+        <a-text value="Patreon" position="-0.08 0 0.016" align="left"  scale="0.12 0.12 0.12" rotation="0 0 0" color="#E8C662"></a-text></a-box>
+    </a-entity>
+			  
+  </a-scene>
+</body>
+</html>
