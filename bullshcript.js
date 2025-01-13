@@ -9,9 +9,9 @@ async function somerandomStartActions() {
 	await waitingForUnity(); console.log("SCRIPT: Unity-Loaded"); setSceneSettings(); setTimeout(() => { 
 
 		/* COMMENTED THIS OUT TO REMOVE THE YOUTUBE PLAYER */
-			 enableVideoPlayer2();
+			//  enableVideoPlayer2();
 		/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
-			// enableScreenStuff2();
+			  enableScreenStuff2();
 
     setTimeout(() => { enableScreenThingy(); }, 8000);
 	}, 3000);
