@@ -2,11 +2,11 @@ const comcoscene = BS.BanterScene.GetInstance();
 
 let websiteurl = "https://screen.sdq.st:8443/?room=comco"; /* ?autoplay=1&controls=0 For YouTube Live */
 
-let otherwebsiteurl = "https://comcotheatre.com/"; // Small Screen Up Stairs
+let otherwebsiteurl = "https://comcotheatre.com/"; // Fire Tablet Homepage
 
 async function somerandomStartActions() {
 	const waitingForUnity = async () => { while (!comcoscene.unityLoaded) { await new Promise(resolve => setTimeout(resolve, 500)); } };
-	await waitingForUnity(); console.log("SCRIPT: Unity-Loaded"); setSceneSettings(settings); setTimeout(() => { 
+	await waitingForUnity(); console.log("SCRIPT: Unity-Loaded"); setSceneSettings(); setTimeout(() => { 
 
 		/* COMMENTED THIS OUT TO REMOVE THE YOUTUBE PLAYER */
 			//  enableVideoPlayer2();
@@ -17,6 +17,7 @@ async function somerandomStartActions() {
 	}, 3000);
 };
 
+/*
       BS.BanterScene.GetInstance().On("unity-loaded", () => {
         BS.BanterScene.GetInstance().TeleportTo(
           { x: 0, y: 0.01, z: 0 },
@@ -45,8 +46,8 @@ async function somerandomStartActions() {
           2000
         );
       });
+*/
 
-/*
 async function setSceneSettings() {
 	console.log("setSceneSettings Loading...");
 	const settings = new BS.SceneSettings();
@@ -69,7 +70,6 @@ async function setSceneSettings() {
 	comcoscene.SetSettings(settings);
 	setTimeout(() => { comcoscene.SetSettings(settings); }, 2000);
 };
-*/
 
 // videoplayer toggle by HBR.& Fire Thank you HBR!
 let ytplayerdisabled = true;
