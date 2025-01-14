@@ -6,7 +6,7 @@ let otherwebsiteurl = "https://comcotheatre.com/"; // Small Screen Up Stairs
 
 async function somerandomStartActions() {
 	const waitingForUnity = async () => { while (!comcoscene.unityLoaded) { await new Promise(resolve => setTimeout(resolve, 500)); } };
-	await waitingForUnity(); console.log("SCRIPT: Unity-Loaded"); setSceneSettings(); setTimeout(() => { 
+	await waitingForUnity(); console.log("SCRIPT: Unity-Loaded"); setSceneSettings(settings); setTimeout(() => { 
 
 		/* COMMENTED THIS OUT TO REMOVE THE YOUTUBE PLAYER */
 			//  enableVideoPlayer2();
