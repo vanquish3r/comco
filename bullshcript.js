@@ -39,8 +39,9 @@ async function somerandomStartActions() {
         settings.MaxOccupancy = 40;
         settings.RefreshRate = 72;
         settings.ClippingPlane = new BS.Vector2(0.05, 1000);
+	settings.SpawnPoint = new BS.Vector4(0, 0.01, 0, 180);
         setTimeout(
-          () => BS.BanterScene.GetInstance().SetSettings(ssettings),
+          () => BS.BanterScene.GetInstance().SetSettings(settings),
           2000
         );
       });
