@@ -5,16 +5,9 @@ let websiteurl = "https://screen.sdq.st:8443/?room=comco"; /* ?autoplay=1&contro
 let otherwebsiteurl = "https://comcotheatre.com/"; // Fire Tablet Homepage
 
 async function somerandomStartActions() {
-	const waitingForUnity = async () => { while (!comcoscene.unityLoaded) { await new Promise(resolve => setTimeout(resolve, 500)); } };
+	const waitingForUnity = async () => { while (!comcoscene.unityLoaded) { await new Promise(resolve => setTimeout(resolve, 200)); } };
 	await waitingForUnity(); console.log("SCRIPT: Unity-Loaded"); // setSceneSettings(); 
-	setTimeout(() => { 
-
-		/* COMMENTED THIS OUT TO REMOVE THE YOUTUBE PLAYER */
-			//  enableVideoPlayer2();
-		/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
-			  enableScreenStuff2();
-
-		
+	
         comcoscene.TeleportTo(
           { x: 0, y: 0.01, z: 0 },
           180,
@@ -31,7 +24,14 @@ async function somerandomStartActions() {
         ssettings.MaxOccupancy = 40;
         ssettings.RefreshRate = 72;
         setTimeout( comcoscene.SetSettings(ssettings), 2000 );
+	
+	setTimeout(() => { 
 
+		/* COMMENTED THIS OUT TO REMOVE THE YOUTUBE PLAYER */
+			//  enableVideoPlayer2();
+		/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
+			  enableScreenStuff2();
+		
     setTimeout(() => { enableScreenThingy(); }, 8000);
 	}, 3000);
 };
