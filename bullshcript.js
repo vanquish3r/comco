@@ -17,37 +17,6 @@ async function somerandomStartActions() {
 	}, 3000);
 };
 
-/*
-      BS.BanterScene.GetInstance().On("unity-loaded", () => {
-        BS.BanterScene.GetInstance().TeleportTo(
-          { x: 0, y: 0.01, z: 0 },
-          180,
-          true
-        );
-        console.log("setSceneSettings Loading...");
-        const settings = new BS.SceneSettings();
-        settings.EnableDevTools = false;
-        settings.EnableTeleport = true;
-        settings.EnableForceGrab = false;
-        settings.EnableSpiderMan = false;
-        settings.EnablePortals = true;
-        settings.EnableGuests = false;
-        settings.EnableQuaternionPose = false;
-        settings.EnableControllerExtras = true;
-        settings.EnableFriendPositionJoin = true;
-        settings.EnableDefaultTextures = true;
-        settings.EnableAvatars = true;
-        settings.MaxOccupancy = 40;
-        settings.RefreshRate = 72;
-        settings.ClippingPlane = new BS.Vector2(0.05, 1000);
-	settings.SpawnPoint = new BS.Vector4(0, 0.01, 0, 180);
-        setTimeout(
-          () => BS.BanterScene.GetInstance().SetSettings(settings),
-          2000
-        );
-      });
-*/
-
 async function setSceneSettings() {
 	console.log("setSceneSettings Loading...");
 	const settings = new BS.SceneSettings();
