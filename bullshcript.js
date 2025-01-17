@@ -13,6 +13,24 @@ async function somerandomStartActions() {
 		/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
 			  enableScreenStuff2();
 
+		
+        BS.BanterScene.GetInstance().TeleportTo(
+          { x: 0, y: 0.01, z: 0 },
+          180,
+          true
+        );
+        console.log("setSceneSettings Loading...");
+        const ssettings = new BS.SceneSettings();
+        ssettings.EnableTeleport = true;
+        ssettings.EnableForceGrab = false;
+        ssettings.EnableSpiderMan = false;
+        ssettings.EnablePortals = true;
+        ssettings.EnableGuests = false;
+        ssettings.EnableFriendPositionJoin = true;
+        ssettings.MaxOccupancy = 40;
+        ssettings.RefreshRate = 72;
+        setTimeout( comcoscene.SetSettings(ssettings), 2000 );
+
     setTimeout(() => { enableScreenThingy(); }, 8000);
 	}, 3000);
 };
