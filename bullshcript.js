@@ -15,7 +15,7 @@ async function somerandomStartActions() {
 			  enableScreenStuff2();
 
 		
-        BS.BanterScene.GetInstance().TeleportTo(
+        comcoscene.TeleportTo(
           { x: 0, y: 0.01, z: 0 },
           180,
           true
