@@ -17,7 +17,7 @@ async function somerandomStartActions() {
 	}, 3000);
 };
 
-/* async function setSceneSettings() {
+ async function setSceneSettings() {
 	console.log("setSceneSettings Loading...");
 	const settings = new BS.SceneSettings();
 	settings.EnableDevTools = false;
@@ -38,7 +38,7 @@ async function somerandomStartActions() {
 	comcoscene.TeleportTo({x: 0, y: 0.01, z: 0}, 180, true);
 	comcoscene.SetSettings(settings);
 	setTimeout(() => { comcoscene.SetSettings(settings); }, 2000);
-}; */
+};
 
 // videoplayer toggle by HBR.& Fire Thank you HBR!
 let ytplayerdisabled = true;
