@@ -18,7 +18,7 @@ async function somerandomStartActions() {
 };
 
  async function setSceneSettings() {
-	console.log("setSceneSettings Loading...");
+/*	console.log("setSceneSettings Loading...");
 	const settings = new BS.SceneSettings();
 	settings.EnableDevTools = false;
 	settings.EnableTeleport = true;
@@ -35,7 +35,7 @@ async function somerandomStartActions() {
 	settings.RefreshRate = 72;
 	settings.ClippingPlane = new BS.Vector2(0.05, 1000);
 	settings.SpawnPoint = new BS.Vector4(0, 0.01, 0, 180);
-	comcoscene.TeleportTo({x: 0, y: 0.01, z: 0}, 180, true);
+	comcoscene.TeleportTo({x: 0, y: 0.01, z: 0}, 180, true); */
 	comcoscene.SetSettings(settings);
 	setTimeout(() => { comcoscene.SetSettings(settings); }, 2000);
 };
