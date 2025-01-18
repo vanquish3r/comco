@@ -18,24 +18,7 @@ async function somerandomStartActions() {
 };
 
  async function setSceneSettings() {
-/*	console.log("setSceneSettings Loading...");
-	const settings = new BS.SceneSettings();
-	settings.EnableDevTools = false;
-	settings.EnableTeleport = true;
-	settings.EnableForceGrab = false;
-	settings.EnableSpiderMan = false;
-	settings.EnablePortals = true;
-	settings.EnableGuests = false;
-	// settings.EnableQuaternionPose = false;
-	// settings.EnableControllerExtras = true;
-	// settings.EnableFriendPositionJoin = true;
-	// settings.EnableDefaultTextures = true;
-	// settings.EnableAvatars = true;
-	settings.MaxOccupancy = 45;
-	settings.RefreshRate = 72;
-	settings.ClippingPlane = new BS.Vector2(0.05, 1000);
-	settings.SpawnPoint = new BS.Vector4(0, 0.01, 0, 180);
-	comcoscene.TeleportTo({x: 0, y: 0.01, z: 0}, 180, true); */
+	console.log("comcoscene setSceneSettings Loading...");
 	comcoscene.SetSettings(settings);
 	setTimeout(() => { comcoscene.SetSettings(settings); }, 2000);
 };
