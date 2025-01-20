@@ -7,7 +7,8 @@ let otherwebsiteurl = "https://comcotheatre.com/"; // Fire Tablet Homepage
 
 async function somerandomStartActions() {
 	const waitingForUnity = async () => { while (!comcoscene.unityLoaded) { await new Promise(resolve => setTimeout(resolve, 500)); } };
-	await waitingForUnity(); console.log("SCRIPT: Unity-Loaded"); setSceneSettings(); setTimeout(() => { 
+	await waitingForUnity(); console.log("SCRIPT: Unity-Loaded"); // setSceneSettings(); 
+	setTimeout(() => { 
 
 		/* COMMENTED THIS OUT TO REMOVE THE YOUTUBE PLAYER */
 			//  enableVideoPlayer2();
@@ -18,11 +19,11 @@ async function somerandomStartActions() {
 	}, 3000);
 };
 
- async function setSceneSettings() {
-	console.log("comcoscene setSceneSettings Loading...");
-	comcoscene.SetSettings(settings);
-	setTimeout(() => { comcoscene.SetSettings(settings); }, 2000);
-};
+//  async function setSceneSettings() {
+// 	console.log("comcoscene setSceneSettings Loading...");
+// 	comcoscene.SetSettings(settings);
+// 	setTimeout(() => { comcoscene.SetSettings(settings); }, 2000);
+// };
 
 // videoplayer toggle by HBR.& Fire Thank you HBR!
 let ytplayerdisabled = true;
