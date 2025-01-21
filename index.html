@@ -3,36 +3,6 @@
     <meta property="og:title" content="ComCo Theatre">
     <meta property="og:description" content="The community theatre of the virtual realm!">
     <meta property="og:image" content="https://cdn.sidequestvr.com/file/657791/comco.jpg">
-<!-- <script>
-	      BS.BanterScene.GetInstance().On("unity-loaded", () => {
-        BS.BanterScene.GetInstance().TeleportTo(
-          { x: 0, y: 0.02, z: 0 },
-          180,
-          true
-        );
-        console.log("setSceneSettings Loading...");
-        const settings = new BS.SceneSettings();
-        settings.EnableDevTools = false;
-        settings.EnableTeleport = true;
-        settings.EnableForceGrab = false;
-        settings.EnableSpiderMan = false;
-        settings.EnablePortals = true;
-        settings.EnableGuests = false;
-        settings.EnableQuaternionPose = false;
-        settings.EnableControllerExtras = true;
-        settings.EnableFriendPositionJoin = true;
-        settings.EnableDefaultTextures = true;
-        settings.EnableAvatars = true;
-        settings.MaxOccupancy = 40;
-        settings.RefreshRate = 72;
-        settings.ClippingPlane = new BS.Vector2(0.05, 1000);
-	settings.SpawnPoint = new BS.Vector4(0, 0.02, 0, 180);
-        setTimeout(
-          () => BS.BanterScene.GetInstance().SetSettings(settings),
-          2000
-        );
-      });
-</script> -->
     <script src="https://vanquish3r.github.io/comco/bullshcript.js?1231" id="comcojs"></script>
 	<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GXSYL0P575"></script>
@@ -56,7 +26,7 @@
 	</script> 
 </head>
 
-<body><a-scene>
+<body><a-scene sq-guestsallowed="enabled: false">
 			  
 			  <!-- Calendar Browser -->
 		<a-entity   id="ComCoBrowser" 
