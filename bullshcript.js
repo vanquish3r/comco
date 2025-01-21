@@ -40,7 +40,7 @@ let ytplayerdisabled = true;
 		videoplayer.setAttribute("spatial-max-distance", "1000");
 		videoplayer.setAttribute("playlist", "PLZWiw-xxQ4SP1uCfpCU8OkHg-tlzewULz");
 		videoplayer.setAttribute("announce", "false");
-	  	// videoplayer.setAttribute("announce-events", "false");
+	  	videoplayer.setAttribute("announce-events", "false");
 		videoplayer.setAttribute("data-playlist-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Playlist.png?v=1713028119937");
 		videoplayer.setAttribute("data-vol-up-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/VolUp.png?v=1713028119640");
 		videoplayer.setAttribute("data-vol-down-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/VolDown.png?v=1713028119279");
