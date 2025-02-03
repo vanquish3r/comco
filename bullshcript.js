@@ -11,9 +11,9 @@ async function somerandomStartActions() {
 	setTimeout(() => { 
 
 		/* COMMENTED THIS OUT TO REMOVE THE YOUTUBE PLAYER */
-			//  enableVideoPlayer2();
+			  enableVideoPlayer2();
 		/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
-			  enableScreenStuff2();
+			//  enableScreenStuff2();
 
     setTimeout(() => { enableScreenThingy(); }, 8000);
 	}, 3000);
