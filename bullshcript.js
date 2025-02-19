@@ -1,7 +1,8 @@
 const comcoscene = BS.BanterScene.GetInstance();
 
 let websiteurl = "https://screen.sdq.st:8443/?room=comco"; /* ?autoplay=1&controls=0 For YouTube Live */
-/* https://screen.sdq.st:8443/?room=comco */
+/* New Screencast - https://screen.sdq.st:8443/?room=comco */
+/* Old Screencast - https://sidequestvr.github.io/SideQuest.Banter.Spaces/screen-cast/?sid=3132519343 */
 
 let otherwebsiteurl = "https://comcotheatre.com/"; // Fire Tablet Homepage
 
