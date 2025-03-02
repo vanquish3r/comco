@@ -12,9 +12,9 @@ async function somerandomStartActions() {
 	setTimeout(() => { 
 
 		/* COMMENTED THIS OUT TO REMOVE THE YOUTUBE PLAYER */
-			//  enableVideoPlayer2();
+			  enableVideoPlayer2();
 		/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
-			  enableScreenStuff2();
+			//  enableScreenStuff2();
 
     setTimeout(() => { enableScreenThingy(); }, 8000);
 	}, 3000);
@@ -39,7 +39,7 @@ let ytplayerdisabled = true;
 		videoplayer.setAttribute("button-scale", "2 2 2");
 		videoplayer.setAttribute("spatial-min-distance", "1");
 		videoplayer.setAttribute("spatial-max-distance", "1000");
-		videoplayer.setAttribute("playlist", "PLZWiw-xxQ4SP1uCfpCU8OkHg-tlzewULz");
+		videoplayer.setAttribute("playlist", "PLC7QdSXG8EDYIqWudXaAsJqMlbZvOaC-_");
 		videoplayer.setAttribute("announce", "false");
 	  	videoplayer.setAttribute("announce-events", "false");
 		videoplayer.setAttribute("data-playlist-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Playlist.png?v=1713028119937");
