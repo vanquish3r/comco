@@ -127,8 +127,8 @@ function enableScreenThingy() {
 		firescreen.setAttribute("custom-button03-text", "CAG Show Notes");
 		//firescreen.setAttribute("custom-button04-url", "https://bls.firer.at/shownotes.html");
 		//firescreen.setAttribute("custom-button04-text", "firer.at shownotes");
-		firescreen.setAttribute("custom-button05-url", "https://banterlateshow.com");
-		firescreen.setAttribute("custom-button05-text", "Banter Late Show");
+		firescreen.setAttribute("custom-button04-url", "https://banterlateshow.com");
+		firescreen.setAttribute("custom-button04-text", "Banter Late Show");
 		firescreen.setAttribute("src", "https://firer.at/scripts/firescreenv2.js");
 		document.querySelector("a-scene").appendChild(firescreen);
 	};
