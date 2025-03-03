@@ -11,18 +11,21 @@ async function somerandomStartActions() {
 	await waitingForUnity(); console.log("SCRIPT: Unity-Loaded");
 	setTimeout(() => { 
 
-		/* COMMENTED THIS OUT TO REMOVE THE YOUTUBE PLAYER */
-			  enableVideoPlayer2();
+		/* PLEASE ENABLE ONLY ONE OF THESE AT A TIME */
+		/* UNCOMMENTED THIS TO ENABLE THE YOUTUBE PLAYER */
+			//  enableVideoPlayer();
 		/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
-			//  enableScreenStuff2();
+			//  enableScreenStuff();
+		/* UNCOMMENTED THIS TO ENABLE KARAOKE PLAYER */
+			  enableKaraokePlayer();
 
     setTimeout(() => { enableScreenThingy(); }, 8000);
 	}, 3000);
 };
 
-// videoplayer toggle by HBR.& Fire Thank you HBR!
+// Video Player Toggle by HBR & FireRat
 let ytplayerdisabled = true;
-  function enableVideoPlayer2() {
+  function enableVideoPlayer() {
   if (ytplayerdisabled){
     console.log("yt player enabling");
     ytplayerdisabled = false;
@@ -34,7 +37,7 @@ let ytplayerdisabled = true;
 		videoplayer.setAttribute("position", "0 -5 0");
 		videoplayer.setAttribute("hand-controls", "true");
 		videoplayer.setAttribute("button-position", "-0.22 3 10.1");
-		videoplayer.setAttribute("volume", "3");
+		videoplayer.setAttribute("volume", "5");
 		videoplayer.setAttribute("button-rotation", "0 0 0");
 		videoplayer.setAttribute("button-scale", "2 2 2");
 		videoplayer.setAttribute("spatial-min-distance", "1");
@@ -53,8 +56,9 @@ let ytplayerdisabled = true;
   } else {console.log("enable yt player called");}
 };
 
+// Fire Screen Toggle
 let screenstuffDisabled = true;
-function enableScreenStuff2() {
+function enableScreenStuff() {
   if (screenstuffDisabled){
 		screenstuffDisabled = false;
 		console.log("Adding Screen Cast");
@@ -96,6 +100,43 @@ function enableScreenStuff2() {
 	console.log("Screen Stuff enabled: " + screenstuffDisabled);
 };
 
+// Karaoke Player Toggle
+let ytplayerdisabled = true;
+  function enableKaraokePlayer() {
+  if (ytplayerdisabled){
+    console.log("karaoke player enabling");
+    ytplayerdisabled = false;
+    const videoplayer = document.createElement("script");
+		videoplayer.id = "comco-karaokeplayer";
+		videoplayer.setAttribute("scale", "1 1 1");
+		videoplayer.setAttribute("mip-maps", "0");
+		videoplayer.setAttribute("rotation", "0 0 0");
+		videoplayer.setAttribute("position", "0 -5 0");
+		videoplayer.setAttribute("hand-controls", "true");
+		videoplayer.setAttribute("button-position", "-0.22 3 10.1");
+		videoplayer.setAttribute("volume", "50");
+		videoplayer.setAttribute("button-rotation", "0 0 0");
+		videoplayer.setAttribute("button-scale", "2 2 2");
+	  	videoplayer.setAttribute("singer-button-position", "-0.22 2 10.1");
+		videoplayer.setAttribute("singer-button-rotation", "0 0 0");
+		videoplayer.setAttribute("singer-button-scale", "2 2 2");
+		videoplayer.setAttribute("spatial-min-distance", "1");
+		videoplayer.setAttribute("spatial-max-distance", "1000");
+		videoplayer.setAttribute("playlist", "");
+		videoplayer.setAttribute("announce", "false");
+	  	videoplayer.setAttribute("announce-events", "false");
+		videoplayer.setAttribute("data-playlist-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Playlist.png?v=1713028119937");
+		videoplayer.setAttribute("data-vol-up-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/VolUp.png?v=1713028119640");
+		videoplayer.setAttribute("data-vol-down-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/VolDown.png?v=1713028119279");
+		videoplayer.setAttribute("data-mute-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Mute.png?v=1713028120228");
+		videoplayer.setAttribute("data-skip-forward-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Forward.png?v=1713028118642");
+		videoplayer.setAttribute("data-skip-backward-icon-url", "https://cdn.glitch.global/69f02c8f-d538-43b7-9c66-5d3973208d79/Backwardsd.png?v=1713028118986");
+		videoplayer.setAttribute("src", "https://best-v-player.glitch.me/karaoke.js"); // https://vidya.sdq.st/playlist.js
+    document.querySelector("a-scene").appendChild(videoplayer);
+  } else {console.log("enable karaoke player called");}
+};
+
+// Fire Tablet Toggle
 let otherScreenDisabled = true;
 
 function enableScreenThingy() {
