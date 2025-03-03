@@ -13,11 +13,11 @@ async function somerandomStartActions() {
 
 		/* PLEASE ENABLE ONLY ONE OF THESE AT A TIME */
 		/* UNCOMMENTED THIS TO ENABLE THE YOUTUBE PLAYER */
-			  enableVideoPlayer();
+			//  enableVideoPlayer();
 		/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
 			//  enableScreenStuff();
 		/* UNCOMMENTED THIS TO ENABLE KARAOKE PLAYER */
-			//  enableKaraokePlayer();
+			  enableKaraokePlayer();
 
     setTimeout(() => { enableScreenThingy(); }, 8000);
 	}, 3000);
