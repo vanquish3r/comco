@@ -101,11 +101,11 @@ function enableScreenStuff() {
 };
 
 // Karaoke Player Toggle
-let ytplayerdisabled = true;
+let karaokeplayerdisabled = true;
   function enableKaraokePlayer() {
-  if (ytplayerdisabled){
+  if (karaokeplayerdisabled){
     console.log("karaoke player enabling");
-    ytplayerdisabled = false;
+    karaokeplayerdisabled = false;
     const videoplayer = document.createElement("script");
 		videoplayer.id = "comco-karaokeplayer";
 		videoplayer.setAttribute("scale", "1 1 1");
