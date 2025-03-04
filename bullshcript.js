@@ -84,7 +84,7 @@ function enableScreenStuff() {
 		firescreen.setAttribute("announce", "false");
 		firescreen.setAttribute("announce-events", "false");
 		firescreen.setAttribute("announce-four-twenty", "false");
-		firescreen.setAttribute("volume", "0.25");
+		firescreen.setAttribute("volume", "0.2");
 		firescreen.setAttribute("width", "1920");
 		firescreen.setAttribute("height", "1080");
 		firescreen.setAttribute("screen-position", "0.21 -7.5 10.1");
@@ -151,7 +151,7 @@ function enableScreenThingy() {
 		otherScreenDisabled = false;
 		console.log("Adding Screen");
 		const firescreen = document.createElement("script");
-		firescreen.id = "banter-firescreen";
+		firescreen.id = "comco-firetablet";
 		firescreen.setAttribute("scale", "0.8 0.8 1");
 		firescreen.setAttribute("position", "-16.989 1.269 -29.428");
 		firescreen.setAttribute("rotation", "0 0 0");		
@@ -161,7 +161,7 @@ function enableScreenThingy() {
 		firescreen.setAttribute("announce", "false");
 		firescreen.setAttribute("announce-events", "true");
 		firescreen.setAttribute("announce-four-twenty", "false");
-		firescreen.setAttribute("volume", "0.25");
+		firescreen.setAttribute("volume", "0.2");
 		firescreen.setAttribute("width", "1280");
 		firescreen.setAttribute("height", "720");
 		firescreen.setAttribute("website", otherwebsiteurl);
