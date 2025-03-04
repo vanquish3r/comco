@@ -84,7 +84,7 @@ function enableScreenStuff() {
 		firescreen.setAttribute("announce", "false");
 		firescreen.setAttribute("announce-events", "false");
 		firescreen.setAttribute("announce-four-twenty", "false");
-		firescreen.setAttribute("volume", "0.2");
+		firescreen.setAttribute("volume", "0.25");
 		firescreen.setAttribute("width", "1920");
 		firescreen.setAttribute("height", "1080");
 		firescreen.setAttribute("screen-position", "0.21 -7.5 10.1");
@@ -161,7 +161,7 @@ function enableScreenThingy() {
 		firescreen.setAttribute("announce", "false");
 		firescreen.setAttribute("announce-events", "true");
 		firescreen.setAttribute("announce-four-twenty", "false");
-		firescreen.setAttribute("volume", "0.2");
+		firescreen.setAttribute("volume", "0.25");
 		firescreen.setAttribute("width", "1280");
 		firescreen.setAttribute("height", "720");
 		firescreen.setAttribute("website", otherwebsiteurl);
