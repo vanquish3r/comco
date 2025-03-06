@@ -6,21 +6,18 @@ let websiteurl = "https://sidequestvr.github.io/SideQuest.Banter.Spaces/screen-c
 
 let otherwebsiteurl = "https://comcotheatre.com/"; // Fire Tablet Homepage
 
-
 async function somerandomStartActions() {
 	const waitingForUnity = async () => { while (!comcoscene.unityLoaded) { await new Promise(resolve => setTimeout(resolve, 500)); } };
 	await waitingForUnity(); console.log("SCRIPT: Unity-Loaded");
 	setTimeout(() => { 
 
-
 		/* PLEASE ENABLE ONLY ONE OF THESE AT A TIME */
 		/* UNCOMMENTED THIS TO ENABLE THE YOUTUBE PLAYER */
 			//  enableVideoPlayer();
-		/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
-			//  enableScreenStuff();
 		/* UNCOMMENTED THIS TO ENABLE KARAOKE PLAYER */
 			//  enableKaraokePlayer();
-
+		/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
+			//  enableScreenStuff();
 
     setTimeout(() => { enableScreenThingy(); }, 8000);
 	}, 3000);
