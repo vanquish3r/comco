@@ -17,7 +17,7 @@ async function somerandomStartActions() {
 		/* UNCOMMENTED THIS TO ENABLE THE YOUTUBE PLAYER */
 			//  enableVideoPlayer();
 		/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
-			//  enableScreenStuff();
+			  enableScreenStuff();
 		/* UNCOMMENTED THIS TO ENABLE KARAOKE PLAYER */
 			//  enableKaraokePlayer();
 
