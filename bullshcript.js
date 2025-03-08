@@ -1,6 +1,6 @@
 const comcoscene = BS.BanterScene.GetInstance();
 
-let websiteurl = "https://sidequestvr.github.io/SideQuest.Banter.Spaces/screen-cast/?sid=3132519343"; /* ?autoplay=1&controls=0 For YouTube Live */
+let websiteurl = "https://screen.sdq.st:8443/?room=comco"; /* ?autoplay=1&controls=0 For YouTube Live */
 /* New Screencast - https://screen.sdq.st:8443/?room=comco */
 /* Old Screencast - https://sidequestvr.github.io/SideQuest.Banter.Spaces/screen-cast/?sid=3132519343 */
 
