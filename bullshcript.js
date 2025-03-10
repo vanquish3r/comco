@@ -17,7 +17,7 @@ async function somerandomStartActions() {
 		/* UNCOMMENTED THIS TO ENABLE KARAOKE PLAYER */
 			//  enableKaraokePlayer();
 		/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
-			//  enableScreenStuff();
+			  enableScreenStuff();
 
     setTimeout(() => { enableScreenThingy(); }, 8000);
 	}, 3000);
