@@ -1,12 +1,18 @@
+const comcoscene = BS.BanterScene.GetInstance();
+
 let websiteurl = "https://screen.sdq.st:8443/?room=comco"; /* ?autoplay=1&controls=0 For YouTube Live */
 /* New Screencast - https://screen.sdq.st:8443/?room=comco */
 /* Old Screencast - https://sidequestvr.github.io/SideQuest.Banter.Spaces/screen-cast/?sid=3132519343 */
 
 let otherwebsiteurl = "https://comcotheatre.com/"; // Fire Tablet Homepage
 
-BS.BanterScene.GetInstance().On("loaded", () => {
- 	console.log("Scene loaded");
-// TOGGLES ON GITHUB NO LONGER IN USE!		
+async function somerandomStartActions() {
+	const waitingForUnity = async () => { while (!comcoscene.unityLoaded) { await new Promise(resolve => setTimeout(resolve, 500)); } };
+	await waitingForUnity(); console.log("SCRIPT: Unity-Loaded");
+	setTimeout(() => { 
+
+// TOGGLES ON GITHUB NO LONGER IN USE!
+		
 		/* PLEASE ENABLE ONLY ONE OF THESE AT A TIME */
 		/* UNCOMMENTED THIS TO ENABLE THE YOUTUBE PLAYER */
 			//  enableVideoPlayer();
@@ -14,9 +20,11 @@ BS.BanterScene.GetInstance().On("loaded", () => {
 			//  enableKaraokePlayer();
 		/* UNCOMMENTED THIS TO ENABLE SCREEN CAST / YOUTUBE LIVE */
 			//  enableScreenStuff();
-		/* FIRETABLET */
-			  enableScreenThingy();
-});
+
+    setTimeout(() => { enableScreenThingy(); }, 8000);
+	}, 3000);
+};
+
 
 // Video Player Toggle by HBR & FireRat
 let ytplayerdisabled = true;
@@ -133,43 +141,47 @@ let karaokeplayerdisabled = true;
   } else {console.log("enable karaoke player called");}
 };
 
-// Fire Tablet
-let screenPortableDisabled = true;
+// Fire Tablet Toggle
+let otherScreenDisabled = true;
+
 function enableScreenThingy() {
-  if (screenPortableDisabled){ screenPortableDisabled = false;
-   setTimeout(() => { 
-	console.log("Adding Fire Tablet");
-	const firescreen = document.createElement("script");
-	firescreen.id = "comco-firetablet";
-	firescreen.setAttribute("scale", "0.7 0.7 1");
-	firescreen.setAttribute("rotation", "0 0 0");
-	firescreen.setAttribute("position", "-16.989 1.269 -29.428");
-	firescreen.setAttribute("mipmaps", "0");
-	firescreen.setAttribute("pixelsperunit", "1200");
-	firescreen.setAttribute("width", "1280");
-	firescreen.setAttribute("height", "720");
-	firescreen.setAttribute("announce", "false");
-	firescreen.setAttribute("announce-events", "true");
-	firescreen.setAttribute("volume", "0.25");
-   	firescreen.setAttribute("backdrop", "true");
-	firescreen.setAttribute("hand-controls", "true");
-	firescreen.setAttribute("custom-button01-url", "https://banterlateshow.glitch.me/0-0-shownotes-0-0.txt");
-	firescreen.setAttribute("custom-button01-text", "BLS Show Notes");
-	firescreen.setAttribute("custom-button02-url", "https://banterlateshow.glitch.me/darwinawards.html");
-	firescreen.setAttribute("custom-button02-text", "Darwin Awards");
-	firescreen.setAttribute("custom-button03-url", "https://banterlateshow.glitch.me/cag-shownotes.txt");
-	firescreen.setAttribute("custom-button03-text", "CAG Show Notes");
-	//firescreen.setAttribute("custom-button04-url", "https://bls.firer.at/shownotes.html");
-	//firescreen.setAttribute("custom-button04-text", "firer.at shownotes");
-	firescreen.setAttribute("custom-button04-url", "https://banterlateshow.com");
-	firescreen.setAttribute("custom-button04-text", "Banter Late Show");
-	firescreen.setAttribute("website", otherwebsiteurl);
-	firescreen.setAttribute("src", "https://firer.at/scripts/firescreenv2.js");
-	document.querySelector("a-scene").appendChild(firescreen);
-   }, 5000); 
-  }
-    console.log("Fire Tablet enabled");
-	
+	console.log("File: loaded");
+	if (otherScreenDisabled) {
+		otherScreenDisabled = false;
+		console.log("Adding Screen");
+		const firescreen = document.createElement("script");
+		firescreen.id = "comco-firetablet";
+		firescreen.setAttribute("scale", "0.8 0.8 1");
+		firescreen.setAttribute("position", "-16.989 1.269 -29.428");
+		firescreen.setAttribute("rotation", "0 0 0");		
+		firescreen.setAttribute("mipmaps", "0");
+		firescreen.setAttribute("pixelsperunit", "1200");
+		firescreen.setAttribute("hand-controls", "true");
+		firescreen.setAttribute("announce", "false");
+		firescreen.setAttribute("announce-events", "true");
+		firescreen.setAttribute("announce-four-twenty", "false");
+		firescreen.setAttribute("volume", "0.25");
+		firescreen.setAttribute("width", "1280");
+		firescreen.setAttribute("height", "720");
+		firescreen.setAttribute("website", otherwebsiteurl);
+		// firescreen.setAttribute("disable-rotation", "false");
+		firescreen.setAttribute("custom-button01-url", "https://banterlateshow.glitch.me/0-0-shownotes-0-0.txt");
+		firescreen.setAttribute("custom-button01-text", "BLS Show Notes");
+		firescreen.setAttribute("custom-button02-url", "https://banterlateshow.glitch.me/darwinawards.html");
+		firescreen.setAttribute("custom-button02-text", "Darwin Awards");
+		firescreen.setAttribute("custom-button03-url", "https://banterlateshow.glitch.me/cag-shownotes.txt");
+		firescreen.setAttribute("custom-button03-text", "CAG Show Notes");
+		//firescreen.setAttribute("custom-button04-url", "https://bls.firer.at/shownotes.html");
+		//firescreen.setAttribute("custom-button04-text", "firer.at shownotes");
+		firescreen.setAttribute("custom-button04-url", "https://banterlateshow.com");
+		firescreen.setAttribute("custom-button04-text", "Banter Late Show");
+		firescreen.setAttribute("src", "https://firer.at/scripts/firescreenv2.js");
+		document.querySelector("a-scene").appendChild(firescreen);
+	};
+}
+
+setTimeout(() => { somerandomStartActions(); }, 5000);
+
 // Poster Boards
   async function createPoster(name, butPosition, posterImage = null, posterLink, localRotation = new BS.Vector3(0,0,0), localScale = new BS.Vector3(1, 1, 1), width = 1.3, height = 1.8) {
     const buttonObject = await new BS.GameObject(`Button_${name}`).Async(); // Create the Object and give it a name
@@ -195,4 +207,3 @@ function enableScreenThingy() {
     createPoster('PosterR1', new BS.Vector3(12.97,3.2,-12.09), 'https://vanquish3r.github.io/comco/posters/poster-r1.jpg', 'https://comcotheatre.com/packages/', new BS.Vector3(0,45.1,0));
     createPoster('PosterR2', new BS.Vector3(16.48,8.5,-8.54), 'https://vanquish3r.github.io/comco/posters/poster-r2.jpg', 'https://comcotheatre.com/packages/', new BS.Vector3(0,45.1,0));
     createPoster('PosterR3', new BS.Vector3(20.04,13.79,-5.04), 'https://vanquish3r.github.io/comco/posters/poster-r3.jpg', 'https://comcotheatre.com/packages/', new BS.Vector3(0,45.1,0));
-  
